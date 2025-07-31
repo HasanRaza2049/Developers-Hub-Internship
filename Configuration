@@ -1,0 +1,56 @@
+✅ NodeGoat Configuration & Installation Summary
+This section documents all terminal commands and actions performed to successfully configure and run the NodeGoat application along with essential security libraries.
+
+📁 1. Project Setup & Clone Repository
+
+cd ~
+mkdir nodegoat
+cd nodegoat
+git clone https://github.com/OWASP/NodeGoat.git .
+Purpose: Create project directory and download NodeGoat source code.
+
+📦 2. Install Dependencies
+
+npm install
+npm install --only=dev
+Purpose: Install required Node.js packages for production and development.
+
+🔒 3. Install Security & Utility Packages
+
+npm install helmet
+npm install winston
+npm install jsonwebtoken
+npm install bcrypt
+npm install validator
+Purpose:
+Install essential security libraries:
+
+helmet – Secure HTTP headers
+
+winston – Log server and security events
+
+jsonwebtoken – Token-based authentication
+
+bcrypt – Secure password hashing
+
+validator – Validate user inputs
+
+🐳 4. Setup MongoDB using Docker
+
+sudo docker run -d \
+  --name mongodb-nodegoat \
+  -p 27017:27017 \
+  -e MONGO_INITDB_DATABASE=nodegoat \
+  mongo:5.0
+Purpose: Run MongoDB database using Docker container.
+
+🛠️ 5. Reset and Seed Database
+
+NODE_ENV=test node artifacts/db-reset.js
+Purpose: Initialize database with required collections and seed test data.
+
+🚀 6. Start the NodeGoat Application
+
+npm start
+Purpose: Launch the NodeGoat web application at:
+http://localhost:4000
