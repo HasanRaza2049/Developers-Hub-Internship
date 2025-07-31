@@ -4,7 +4,7 @@ It was a great learning opportunity to enhance my web application security skill
 Overview
 This repository contains my completed tasks for the Developer’s Hub Cybersecurity Internship, focused on identifying and mitigating common web application vulnerabilities using a Node.js-based app (NodeGoat).
 
-What I Learned:
+What I Learned
 This internship provided hands-on experience with real-world web application security practices. I learned to:
 
 Identify vulnerabilities using tools like OWASP ZAP and Nmap
@@ -22,6 +22,7 @@ Enable logging with Winston
 Document findings and enforce best practices through a simple security checklist
 
 Key Security Measures Implemented:
+
 ✅ Input validation & sanitization (validator)
 
 ✅ Password hashing (bcrypt)
@@ -35,6 +36,7 @@ Key Security Measures Implemented:
 ✅ Penetration testing with Nmap & browser tools
 
 Contents:
+
 server.js – Secured backend with logging and headers
 
 session.js – Enhanced authentication with JWT & validation
